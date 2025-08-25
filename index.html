@@ -4,33 +4,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BPonline</title>
+  <title>Angry Birds Rio</title>
   <style>
-    /* Container to control size */
-    body, html {
-      margin: 0;
-      padding: 0;
+    html, body {
       height: 100%;
-      width: 100%;
-      overflow: hidden;
+      margin: 0;
       display: flex;
       justify-content: center;
       align-items: center;
-      background: #000; /* optional, for contrast */
+      background: #000;
+    }
+
+    /* Wrapper to maintain aspect ratio */
+    .flash-container {
+      width: 90vw;       /* up to 90% of viewport width */
+      max-width: 958px;  /* max original width */
+      aspect-ratio: 958 / 858; /* keeps original aspect ratio */
     }
 
     object {
-      width: 90vw;  /* 90% of viewport width */
-      height: auto;
-      max-height: 90vh; /* max 90% of viewport height */
+      width: 100%;
+      height: 100%;
+      display: block; /* remove inline gap */
     }
   </style>
 </head>
 
 <body>
   <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
-  <object type="application/x-shockwave-flash" data="Angry-Birds-Rio.swf" style="max-width: 958px; max-height: 858px;">
-  </object>
+  <div class="flash-container">
+    <object type="application/x-shockwave-flash" data="Angry-Birds-Rio.swf">
+    </object>
+  </div>
 </body>
 
 </html>
