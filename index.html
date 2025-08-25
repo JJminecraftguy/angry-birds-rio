@@ -6,28 +6,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Angry Birds Rio</title>
   <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #000;
-    }
+html, body {
+  height: 100vh;       /* full viewport height */
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  overflow: hidden;    /* prevent scrollbars */
+}
 
-    /* Wrapper to maintain aspect ratio */
-    .flash-container {
-      width: 90vw;       /* up to 90% of viewport width */
-      max-width: 958px;  /* max original width */
-      aspect-ratio: 958 / 858; /* keeps original aspect ratio */
-    }
+.flash-container {
+  width: 100vw;          /* full viewport width */
+  height: 100vh;         /* full viewport height */
+  max-width: calc(100vh * (958 / 858));  /* limit width by height-based calculation */
+  max-height: 100vh;     /* limit height to viewport height */
+  aspect-ratio: 958 / 858;  /* maintain original aspect ratio */
+  box-sizing: border-box;
+}
 
-    object {
-      width: 100%;
-      height: 100%;
-      display: block; /* remove inline gap */
-    }
-  </style>
+object {
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: transparent;
+}
+</style>    
 </head>
 
 <body>
