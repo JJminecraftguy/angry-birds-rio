@@ -1,51 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Angry Birds Rio</title>
+  <title>BPonline</title>
   <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  height: 100vh;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #000;
-  overflow: hidden;
-}
-
-.flash-container {
-  width: 100vw;
-  height: 100vh;
-  max-width: calc(100vh * (958 / 858));
-  max-height: 100vh;
-  aspect-ratio: 958 / 858;
-  flex-shrink: 0;
-}
-
-object {
-  width: 100%;
-  height: 100%;
-  display: block;
-  background: transparent;
-}
- </style>    
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #000;
+    }
+    object {
+      width: 90vw;
+      height: auto;
+      max-width: 958px;
+      max-height: 858px;
+      aspect-ratio: 958 / 858;
+      display: block;
+    }
+  </style>
 </head>
-
 <body>
   <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
-  <div class="flash-container">
-    <object type="application/x-shockwave-flash" data="Angry-Birds-Rio.swf">
-    </object>
-  </div>
+  <object type="application/x-shockwave-flash" data="Angry-Birds-Rio.swf"></object>
 </body>
-
 </html>
