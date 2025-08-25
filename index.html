@@ -1,19 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BPonline</title>
+  <style>
+    /* Container to control size */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #000; /* optional, for contrast */
+    }
 
+    object {
+      width: 90vw;  /* 90% of viewport width */
+      height: auto;
+      max-height: 90vh; /* max 90% of viewport height */
+    }
+  </style>
+</head>
 
-
-<!DOCTYPE html> 
-<html> 
-  
-<head> 
-    <title>BPonline</title> 
-</head> 
-  
-<body> 
+<body>
   <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
-    <object type="application/x-shockwave-flash" 
-        data="Angry-Birds-Rio.swf" width="958" height="858"> 
-    </object> 
-</body> 
-  
+  <object type="application/x-shockwave-flash" data="Angry-Birds-Rio.swf" style="max-width: 958px; max-height: 858px;">
+  </object>
+</body>
+
 </html>
